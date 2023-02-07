@@ -7,24 +7,24 @@ const translation = {
     }, 
     greeting: {
         night: {
-            ru: 'Доброй ночи',
-            en: 'Good night',
+            ru: 'Доброй ночи,',
+            en: 'Good night,',
         },
         morning: {
-            ru: 'Доброе утро',
-            en: 'Good morning',
+            ru: 'Доброе утро,',
+            en: 'Good morning,',
         },
         afternoon: {
-            ru: 'Добрый день',
-            en: 'Good afternoon',
+            ru: 'Добрый день,',
+            en: 'Good afternoon,',
         },
         evening : {
-            ru: 'Добрый вечер',
-            en: 'Good evening',
+            ru: 'Добрый вечер,',
+            en: 'Good evening,',
         },
     },
     placeholder: {
-        ru: 'Введите имя',
-        en: 'Enter name',
+        ru: 'Введите имя,',
+        en: 'Enter name,',
     },
 }
