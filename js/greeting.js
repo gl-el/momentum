@@ -3,12 +3,12 @@ const nameBox = document.querySelector('.name');
 nameBox.placeholder = translation.placeholder[lang];
 
 function showGreeting() {
-    greeting.textContent = translation.greeting[getGreeting()][lang];
+    greeting.textContent = translation.greeting[getTimesOfDay()][lang];
 }
 
 showGreeting();
 
-function getGreeting() {
+function getTimesOfDay() {
     const date = new Date();
     const hours = date.getHours();
     if (hours >= 0 && hours < 6) return 'night';
