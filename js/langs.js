@@ -32,7 +32,7 @@ const translation = {
         en: 'Minsk',
     },
     temperatureFeel: {
-        ru: 'Ощущается как:',
+        ru: 'Ощущается:',
         en: 'Feels like:',
     },
     wind: {
