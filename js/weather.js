@@ -33,7 +33,10 @@ async function getWeather() {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=${lang}&appid=77b18be68c156564e1b5eada12cc5552&units=metric`;
     const res = await fetch(url);
     const data = await res.json();
-    if (data.cod !== '404') {
+    try {
+        if (!data.weather) {
+            throw new ReferenceError(`${translation.weatherError[lang]}`);
+        }
         weatherError.textContent = '';
         weatherIcon.className = 'weather-icon owf';
         weatherIcon.classList.add(`owf-${data.weather[0].id}`);
@@ -42,8 +45,8 @@ async function getWeather() {
         weatherDescription.textContent = `${data.weather[0].description}`;
         wind.textContent = `${translation.wind[lang]} ${Math.round(data.wind.speed * 10) / 10} ${translation.speed[lang]}`;
         humidity.textContent = `${translation.humidity[lang]} ${data.main.humidity} %`;
-    } else {
-        weatherError.textContent = translation.weatherError[lang];
+    } catch(e) {
+        weatherError.textContent = e.message;
         weatherIcon.className = 'weather-icon owf';
         temperature.textContent = '';
         temperatureFeel.textContent = '';
