@@ -275,6 +275,31 @@
   min-height: 20px;
 }
 
+.footer-items {
+  width: 100%;
+  list-style-type: none; 
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.footer__item {
+  width: 10%;
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer__item:hover {
+  opacity: 1;
+  scale: 1.2;
+}
+
+.rslogo {
+  height: 51px;
+}
+
 @media (max-width: 768px) {
   .time {
     min-height: 80px;
