@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -19,12 +19,15 @@
       <ul class="play-list"></ul>
     </div>
     <div class="weather">
-      <input type="text" class="city" />
-      <i class="weather-icon owf"></i>
+      <input type="text" class="city" value=""/>
+      <div class="weather-indicators" >
+        <i class="weather-icon owf"></i>
+        <span class="temperature"></span>
+      </div>
       <div class="weather-error"></div>
       <div class="description-container">
-        <span class="temperature"></span>
         <span class="weather-description"></span>
+        <span class="temperature-feel"></span>
       </div>
       <div class="wind"></div>
       <div class="humidity"></div>
@@ -53,5 +56,6 @@
   <script src="js/greeting.js"></script>
   <script src="js/timeAndDate.js"></script>
   <script src="js/slider.js"></script>
+  <script src="js/weather.js"></script>
 </body>
 </html>

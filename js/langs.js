@@ -24,7 +24,31 @@ const translation = {
         },
     },
     placeholder: {
-        ru: 'Введите имя,',
-        en: 'Enter name,',
+        ru: 'Введите имя',
+        en: 'Enter name',
+    },
+    cityName: {
+        ru: 'Минск',
+        en: 'Minsk',
+    },
+    temperatureFeel: {
+        ru: 'Ощущается как:',
+        en: 'Feels like:',
+    },
+    wind: {
+        ru: 'Ветер:',
+        en: 'Wind speed:',
+    },
+    speed: {
+        ru: 'м/с',
+        en: 'm/s',
+    },
+    humidity: {
+        ru: 'Влажность:',
+        en: 'Humidity:',
+    },
+    weatherError: {
+        ru: 'Ошибка. Город не найден.',
+        en: 'Error. City not found.',
     },
 }
