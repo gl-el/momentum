@@ -92,8 +92,7 @@
 }
 
 .player-icon:active,
-.slider-icon:active,
-.change-quote:active {
+.slider-icon:active {
   border: 0;
   outline: 0;  
   transform: scale(1.1);
@@ -265,6 +264,16 @@
 .change-quote {
   margin-bottom: 30px;
   background-image: url("../assets/svg/reload.svg");  
+}
+
+.change-quote:active {
+  border: 0;
+  outline: 0;  
+  transform: scale(1.1) rotate(0.5turn);
+}
+
+.quote-container {
+  margin-bottom: 30px;
 }
 
 .quote {

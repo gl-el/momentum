@@ -3,9 +3,9 @@ const next = document.querySelector('.slide-next');
 const prev = document.querySelector('.slide-prev');
 const min = 1;
 const max = 20;
-let randomNum = getRandomNum();
+let randomNum = getRandomNum(1, 20);
 
-function getRandomNum() {
+function getRandomNum(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
