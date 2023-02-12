@@ -51,4 +51,8 @@ const translation = {
         ru: 'Ошибка. Город не найден.',
         en: 'Error. City not found.',
     },
+    tagError: {
+        ru: 'Изображений не найдено',
+        en: 'Image not found',
+    },
 }
