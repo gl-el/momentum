@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8" />
@@ -30,6 +30,11 @@
         <div class="current-time">00:00</div><div class="duration-time"></div>
       </div>
       <ul class="play-list"></ul>
+    </div>
+    <div class="language-setting">
+      <span class="en">En</span>
+      <input class="language-slider" type="range" min="0" max="1" step="1" value="0">
+      <span class="ru">Ru</span>
     </div>
     <div class="weather">
       <input type="text" class="city" value="" />
@@ -92,6 +97,7 @@
   <script src="js/quotes.js"></script>
   <script type="module" src="js/playList.js"></script>
   <script type="module" src="js/player.js"></script>
+  <script src="js/translation.js"></script>
 </body>
 
 </html>

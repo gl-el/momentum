@@ -1,9 +1,10 @@
 const greeting = document.querySelector('.greeting');
 const nameBox = document.querySelector('.name');
-nameBox.placeholder = translation.placeholder[lang];
+
 
 function showGreeting() {
     greeting.textContent = translation.greeting[getTimesOfDay()][lang];
+    nameBox.placeholder = translation.placeholder[lang];
 }
 
 showGreeting();

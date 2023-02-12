@@ -333,6 +333,10 @@
   margin-bottom: 20px;
 }
 
+.date::first-letter {
+  text-transform: capitalize;
+}
+
 .greeting-container {
   display: flex;
   flex-wrap: wrap;
@@ -423,6 +427,50 @@
 
 .rslogo {
   height: 51px;
+}
+
+.language-setting {
+  display: flex;
+  align-items: center;
+}
+
+.language-slider {
+  position: relative;
+  z-index: 2;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 70px;
+  height: 30px; 
+  background-color:#fff;
+  opacity: 0.3; 
+  outline: none;
+  border-radius: 10px; 
+  transition: opacity .2s;
+  cursor: pointer;
+}
+
+.language-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  background: #8a8a8a;
+}
+
+.en,
+.ru {
+  display: inline-block;
+}
+
+.en {
+  position: relative;
+  left:25px;
+}
+
+.ru {
+  position: relative;
+  right: 25px;
 }
 
 @media (max-width: 768px) {
