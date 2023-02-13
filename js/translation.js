@@ -1,8 +1,8 @@
 const langsSelect = document.querySelector('.language-slider');
-const langSwitch = document.querySelector('.switch');
+const langsSwitch = document.querySelector('.lang__checkbox');
 
-langsSelect.addEventListener('change', (e) => {
-  (langsSelect.value === '0') ? lang = 'en' : lang = 'ru';
+langsSwitch.addEventListener('change', (e) => {
+  (langsSwitch.checked) ? lang = 'ru' : lang = 'en';
   getWeather();
   getQuotes(true);
   showGreeting();

@@ -429,50 +429,6 @@
   height: 51px;
 }
 
-.language-setting {
-  display: flex;
-  align-items: center;
-}
-
-.language-slider {
-  position: relative;
-  z-index: 2;
-  -webkit-appearance: none;
-  appearance: none;
-  width: 60px;
-  height: 30px;
-  background-color: #fff;
-  opacity: 0.3;
-  outline: none;
-  border-radius: 10px;
-  transition: opacity .2s;
-  cursor: pointer;
-}
-
-.language-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 30px;
-  height: 30px;
-  border-radius: 10px;
-  background: #8a8a8a;
-}
-
-.en,
-.ru {
-  display: inline-block;
-}
-
-.en {
-  position: relative;
-  left: 25px;
-}
-
-.ru {
-  position: relative;
-  right: 25px;
-}
-
 .image-src {
   padding: 0 5px;
   height: 30px;
@@ -504,13 +460,100 @@
   background-color: #8a8a8a;
   color: #FFF;
   opacity: 0.7;
-  transition: opacity .2s;
+  transition: all .5s;
+}
+
+.inactive {
+  opacity: 0;
+  visibility: hidden;
 }
 
 .image-tag:hover,
 .image-tag:active {
   opacity: 1;
 } 
+
+.switch {
+  position:relative;
+  display: inline-block;
+  width: 66px;
+  height: 30px;
+}
+
+.langs__labels {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s ease-in-out;
+}
+
+.langs__labels::after {
+  content: attr(data-ru);
+  position: absolute;
+  right: 4px;
+  color: #fff;
+  opacity: 0.7;
+  transition: all 0.4s ease-in-out;
+}
+
+.langs__labels::before {
+  content: attr(data-en);
+  position: absolute;
+  left: 4px;
+  color: #fff;
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+}
+
+.switch__input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.switch__slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  opacity: 0.3;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.switch__slider:before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  left: 0px;
+  bottom: 0px;
+  border-radius: 10px;
+  background-color: #8a8a8a;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.switch__input:checked + .switch__slider:before {
+  -webkit-transform: translateX(36px);
+  -ms-transform: translateX(36px);
+  transform: translateX(36px);
+}
+
+.switch__input:checked ~ .langs__labels::after {
+  opacity: 1;
+}
+
+.switch__input:checked ~ .langs__labels::before {
+  opacity: 0.7;
+}
+
 
 @media (max-width: 768px) {
   .time {

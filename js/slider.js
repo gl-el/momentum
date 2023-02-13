@@ -60,6 +60,7 @@ async function toggleImg() {
     }
 }
 async function changeImgSrc() {
+    (imgSrcSelect.value === '0') ? imgTagInput.classList.add('inactive') : imgTagInput.classList.remove('inactive');
     if (imgSrcSelect.value === '1') await getUnsplashGallery();
     if (imgSrcSelect.value === '2') await getFlickrGallery();
     toggleImg();
