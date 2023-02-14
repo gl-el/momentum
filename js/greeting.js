@@ -33,10 +33,3 @@ function setLocalStorage(user) {
     localStorage.setItem('userName', user);
 }
 
-function getLocalStorage() {
-    if(localStorage.getItem('userName')) {
-        nameBox.value = localStorage.getItem('userName');
-    }
-}
-  
-window.addEventListener('load', getLocalStorage)

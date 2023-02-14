@@ -41,7 +41,10 @@ function getSliderPrev() {
     toggleImg()
 }
 
-imgSrcSelect.addEventListener('change', changeImgSrc);
+imgSrcSelect.addEventListener('change', async () => {
+ await  changeImgSrc();
+ localStorage.setItem('imgSrc', imgSrcSelect.value);
+});
 
 async function toggleImg() {
     switch (imgSrcSelect.value) {
@@ -60,10 +63,13 @@ async function toggleImg() {
     }
 }
 async function changeImgSrc() {
-    (imgSrcSelect.value === '0') ? imgTagInput.classList.add('inactive') : imgTagInput.classList.remove('inactive');
+    (imgSrcSelect.value === '0') ? imgTagInput.classList.add('tag_inactive') : imgTagInput.classList.remove('tag_inactive');
     if (imgSrcSelect.value === '1') await getUnsplashGallery();
     if (imgSrcSelect.value === '2') await getFlickrGallery();
     toggleImg();
 }
 
-imgTagInput.addEventListener('change', changeImgSrc);
+imgTagInput.addEventListener('change', async () => {
+   await changeImgSrc();
+   localStorage.setItem('imgTag', imgTagInput.value);
+});

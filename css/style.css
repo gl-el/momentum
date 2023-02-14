@@ -36,6 +36,8 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  -webkit-transition: 0.5s; 
+  transition: all 0.5s;
 }
 
 .player-controls {
@@ -178,7 +180,7 @@
   list-style: none;
   opacity: .8;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .item-active::before {
@@ -187,7 +189,8 @@
 
 .player-icon,
 .slider-icon,
-.change-quote {
+.change-quote,
+.settings-button {
   width: 32px;
   height: 32px;
   background-size: 32px 32px;
@@ -198,17 +201,19 @@
   outline: 0;
   opacity: .8;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .player-icon:hover,
 .slider-icon:hover,
-.change-quote:hover {
+.change-quote:hover,
+.settings-button {
   opacity: 1;
 }
 
 .player-icon:active,
-.slider-icon:active {
+.slider-icon:active,
+.settings-button {
   border: 0;
   outline: 0;
   transform: scale(1.1);
@@ -242,6 +247,8 @@
   width: 180px;
   min-height: 180px;
   text-align: left;
+  -webkit-transition: 0.5s; 
+  transition: all 0.5s;
 }
 
 .weather-error {
@@ -325,12 +332,16 @@
   font-family: 'Arial-MT';
   font-size: 100px;
   letter-spacing: -4px;
+  -webkit-transition: 0.5s; 
+  transition: all 0.5s;
 }
 
 .date {
   min-height: 28px;
   font-size: 24px;
   margin-bottom: 20px;
+  -webkit-transition: 0.5s; 
+  transition: all 0.5s;
 }
 
 .date::first-letter {
@@ -345,6 +356,8 @@
   min-height: 48px;
   width: 100vw;
   font-size: 40px;
+  -webkit-transition: 0.5s; 
+  transition: all 0.5s;
 }
 
 .greeting {
@@ -394,6 +407,8 @@
 
 .quote-container {
   margin-bottom: 30px;
+  -webkit-transition: 0.5s; 
+  transition: all 0.5s;
 }
 
 .quote {
@@ -411,7 +426,6 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-
 }
 
 .footer__item {
@@ -429,6 +443,55 @@
   height: 51px;
 }
 
+.settings {
+  width: 225px;
+  position: fixed;
+  left: 20px;
+}
+
+.settings-button {
+  position: relative;
+  right: 115px;
+  margin-top: 15px;
+  background-image: url(../assets/svg/left_panel_open_FILL0_wght400_GRAD0_opsz48.svg);
+  -webkit-transition: background-image 0.5s;
+  transition: background-image 0.5s;
+}
+
+.settings-button.active {
+  background-image: url(../assets/svg/left_panel_close_FILL0_wght400_GRAD0_opsz48.svg);
+}
+
+.settings-list {
+  list-style-type: none;
+  position: relative;
+  width: 100%;
+  left: 0px;
+  transition: all 0.5s;
+}
+
+.settings_inactive {
+  left: -330px;
+}
+.settings_inactive .image-tag {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.settings-item {
+  margin-top: 10px;
+  display: flex;
+}
+
+.settings-item__description {
+  margin-right: auto;
+}
+
+.settings-item {
+  display: flex;
+  align-items: center;
+}
+
 .image-src {
   padding: 0 5px;
   height: 30px;
@@ -440,7 +503,7 @@
   background-color: #8a8a8a;
   color: #FFF;
   opacity: 0.7;
-  transition: opacity .2s;
+  transition: opacity 0.2s;
 }
 
 .image-src:hover,
@@ -452,7 +515,10 @@
 .image-tag {
   font-size: 1rem;
   height: 30px;
+  width: 200px;
   padding: 0 5px;
+  position: absolute;
+  left: 230px;
   border: 0;
   border-radius: 10px;
   box-sizing: border-box;
@@ -461,6 +527,11 @@
   color: #FFF;
   opacity: 0.7;
   transition: all .5s;
+}
+
+.tag_inactive {
+  height: 0;
+  width: 0;
 }
 
 .inactive {
@@ -476,11 +547,13 @@
 .switch {
   position:relative;
   display: inline-block;
+  cursor:pointer;
   width: 66px;
   height: 30px;
 }
 
-.langs__labels {
+.langs__labels,
+.options__labels {
   position: absolute;
   top: 5px;
   left: 0;
@@ -546,14 +619,33 @@
   transform: translateX(36px);
 }
 
-.switch__input:checked ~ .langs__labels::after {
+.switch__input:checked ~ .langs__labels::after,
+.switch__input:checked ~ .options__labels::after{
   opacity: 1;
 }
 
-.switch__input:checked ~ .langs__labels::before {
+.switch__input:checked ~ .langs__labels::before,
+.switch__input:checked ~ .options__labels::before {
   opacity: 0.7;
 }
 
+.options__labels::after {
+  content: attr(data-off);
+  position: absolute;
+  right: 4px;
+  color: #fff;
+  opacity: 0.7;
+  transition: all 0.4s ease-in-out;
+}
+
+.options__labels::before {
+  content: attr(data-on);
+  position: absolute;
+  left: 4px;
+  color: #fff;
+  opacity: 1;
+  transition: all 0.4s ease-in-out;
+}
 
 @media (max-width: 768px) {
   .time {

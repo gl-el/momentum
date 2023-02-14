@@ -27,24 +27,12 @@
         <div class="progress-bar"></div>
       </div>
       <div class="time-container">
-        <div class="current-time">00:00</div><div class="duration-time"></div>
+        <div class="current-time">00:00</div>
+        <div class="duration-time"></div>
       </div>
       <ul class="play-list"></ul>
     </div>
-    <label class="switch langs">
-      <input type="checkbox" class="switch__input lang__checkbox">
-      <span class="switch__slider"></span>
-      <span class="langs__labels" data-en="En" data-ru="Ru"></span>
-    </label>
-    </label>
-    <div class="src-selection">
-    <select class="image-src">
-      <option value="0">GitHub</option>
-      <option value="1">Unsplash</option>
-      <option value="2">Flickr</option>
-    </select>
-    <input class="image-tag inactive" type="text" placeholder="tag">
-    </div>
+
     <div class="weather">
       <input type="text" class="city" value="" />
       <div class="weather-indicators">
@@ -78,6 +66,76 @@
       <div class="quote"></div>
       <div class="author"></div>
     </div>
+    <div class="settings">
+      <ul class="settings-list settings_inactive">
+        <li class="settings-item">
+          <div class="settings-item__description settings__lang">Language</div>
+          <label class="switch langs">
+            <input type="checkbox" class="switch__input lang__checkbox">
+            <span class="switch__slider"></span>
+            <span class="langs__labels" data-en="En" data-ru="Ru"></span>
+          </label>
+        </li>
+        <li class="settings-item src-selection">
+          <div class="settings-item__description setting__src">Image source</div>
+          <input class="image-tag tag_inactive" type="text" placeholder="tag">
+          <select class="image-src">
+            <option value="0">GitHub</option>
+            <option value="1">Unsplash</option>
+            <option value="2">Flickr</option>
+          </select>
+        </li>
+        <li class="settings-item">
+          <div class="settings-item__description settings__player">Player</div>
+          <label class="switch">
+            <input type="checkbox" class="switch__input player__checkbox">
+            <span class="switch__slider"></span>
+            <span class="options__labels" data-on="On" data-off="Off"></span>
+          </label>
+        <li>
+        <li class="settings-item">
+          <div class="settings-item__description settings__weather">Weather</div>
+          <label class="switch">
+            <input type="checkbox" class="switch__input weather__checkbox">
+            <span class="switch__slider"></span>
+            <span class="options__labels" data-on="On" data-off="Off"></span>
+          </label>
+        <li>
+        <li class="settings-item">
+          <div class="settings-item__description settings__time">Time</div>
+          <label class="switch">
+            <input type="checkbox" class="switch__input time__checkbox">
+            <span class="switch__slider"></span>
+            <span class="options__labels" data-on="On" data-off="Off"></span>
+          </label>
+        <li>
+        <li class="settings-item">
+          <div class="settings-item__description settings__date">Date</div>
+          <label class="switch">
+            <input type="checkbox" class="switch__input date__checkbox">
+            <span class="switch__slider"></span>
+            <span class="options__labels" data-on="On" data-off="Off"></span>
+          </label>
+        <li>
+        <li class="settings-item">
+          <div class="settings-item__description settings__greeting">Greeting</div>
+          <label class="switch">
+            <input type="checkbox" class="switch__input greeting__checkbox">
+            <span class="switch__slider"></span>
+            <span class="options__labels" data-on="On" data-off="Off"></span>
+          </label>
+        <li>
+        <li class="settings-item">
+          <div class="settings-item__description settings__quote">Quote</div>
+          <label class="switch">
+            <input type="checkbox" class="switch__input quote__checkbox">
+            <span class="switch__slider"></span>
+            <span class="options__labels" data-on="On" data-off="Off"></span>
+          </label>
+        <li>
+      </ul>
+      <button class="settings-button"></button>
+    </div>
     <ul class="footer-items">
       <li class="footer__item">
         <span>©</span> <time datetime="2023">2023</time>
@@ -109,7 +167,7 @@
   <script src="js/translation.js"></script>
   <script src="js/unsplash.js"></script>
   <script src="js/flickr.js"></script>
-  <script src="settings.js"></script>
+  <script src="js/settings.js"></script>
 </body>
 
 </html>

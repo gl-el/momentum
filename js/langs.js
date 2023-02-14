@@ -55,4 +55,38 @@ const translation = {
         ru: 'Изображений не найдено',
         en: 'Image not found',
     },
+    settings: {
+        langSetting: {
+            ru: 'Язык',
+            en: 'Language',
+        },
+        srcSetting: {
+            ru: 'Источник фона',
+            en: 'Image source',
+        },
+        playerSetting: {
+            ru: 'Плеер',
+            en: 'Player',
+        },
+        weatherSetting: {
+            ru: 'Погода',
+            en: 'Weather',
+        },
+        timeSetting: {
+            ru: 'Часы',
+            en: 'Clock',
+        },
+        dateSetting: {
+            ru: 'Дата',
+            en: 'Date',
+        },
+        greetingSetting: {
+            ru: 'Приветствие',
+            en: 'Greeting',
+        },
+        quoteSetting: {
+            ru: 'Цитата',
+            en: 'Quote ',
+        },
+    }
 }
