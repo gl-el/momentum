@@ -105,6 +105,12 @@ function getLocalStorage() {
     (quoteSetting === 'true') ? btnQuote.checked = true : btnQuote.checked = false;
     (btnQuote.checked) ? quoteWhole.classList.add('inactive') : quoteWhole.classList.remove('inactive');
   }
+  if (localStorage.getItem('todoItemsRef')) {
+    todoItems = JSON.parse(localStorage.getItem('todoItemsRef'));
+    todoItems.forEach(item => {
+      renderTodo(item);
+    });
+  }
 }
 
 window.addEventListener('load', getLocalStorage)
