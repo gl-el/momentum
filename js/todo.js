@@ -5,8 +5,6 @@ showToDoBtn.addEventListener('click', () => {
   showToDoBtn.classList.toggle('top_inactive');
 })
 
-
-
 let todoItems = [];
 
 const list = document.querySelector('.to-do__list');
@@ -74,7 +72,7 @@ function toggleDone(key) {
 }
 
 function deleteItem(key) {
-  const index= todoItems.findIndex(item => item.id === +key);
+  const index = todoItems.findIndex(item => item.id === +key);
   const deletedItem = {
     deleted: true,
     ...todoItems[index]

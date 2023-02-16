@@ -58,6 +58,14 @@ btnQuote.addEventListener('click', () => {
   localStorage.setItem('quoteSetting', btnQuote.checked);
 })
 
+const btnTodo = document.querySelector('.todo__checkbox');
+const todo = document.querySelector('.to-do')
+btnTodo.addEventListener('click', () => {
+  todo.classList.toggle('inactive');
+  localStorage.setItem('todo', btnTodo.checked);
+})
+
+
 function getLocalStorage() {
   if (localStorage.getItem('userName')) {
     nameBox.value = localStorage.getItem('userName');
